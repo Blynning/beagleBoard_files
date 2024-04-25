@@ -1,0 +1,1 @@
+extern int getIPv4(char *timeM);
