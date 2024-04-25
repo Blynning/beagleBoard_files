@@ -77,7 +77,7 @@ char* temperature_dec= malloc(7*sizeof(char));
 get_Temp(temperature_dec);
 ```
 
-# Appenix
+# also remember
 ### to use malloc() and free()
 ```c
 #include <stdlib.h>
