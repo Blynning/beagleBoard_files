@@ -88,3 +88,12 @@ free(time_hour);
 free(time_minutes);
 free(temperature_dec);
 ```
+
+### compile
+´´´bash
+gcc -c display.c -o display.o -li2c
+gcc -c ipGetter.c -o ipGetter.o
+gcc -c localTime.c -o localTime.o
+gcc -c tempDev.c -o tempDev.o -li2c
+gcc *YOURFILE.C* tempDev.o display.o  localTime.o ipGetter.o  -o *YOURFILE* -li2c -pthread
+```
