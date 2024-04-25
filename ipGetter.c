@@ -9,7 +9,7 @@
 #include <arpa/inet.h>
 
 // hent IPv4 addresse fra "eth0"
-int getIPv4(char *ipAdd)
+int get_IPv4(char *ipAdd)
 {
     int fd; //socket fil descriptor (socket id)
     struct ifreq ifr; // struct for interface request
