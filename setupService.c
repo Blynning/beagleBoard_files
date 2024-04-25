@@ -38,7 +38,7 @@ void *fetch_ip(void *arg){
                 pthread_mutex_lock(&display_mutex);
                 display_write(ipaddress_eth0, 1);
                 pthread_mutex_unlock(&display_mutex);
-                sleep(2);
+                usleep(2100000);
                         
         }
         free(ipaddress_eth0); //free allocated memory for the ip
@@ -84,7 +84,7 @@ void *display_temp_time(void *arg){
                 pthread_mutex_lock(&display_mutex);
                 display_write(displayText, 2);
                 pthread_mutex_unlock(&display_mutex);
-                usleep(500000);<
+                usleep(500000);
                 
         }
         free(time_hour);

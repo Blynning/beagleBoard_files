@@ -87,13 +87,11 @@ void display_write(char* message, int line)
         // change line to 2
         unsigned char data1[2] = {0x00, 0xC0};
         write(i2c_fd, data1, 2);
-    }
-    
-    /*else{
+    }else{
          // change line to 1
         unsigned char data1[2] = {0x00, 0x80};
         write(i2c_fd, data1, 2);
-    }*/
+    }
         
     
     for (int i = 0; i < strlen(message); i++) {
