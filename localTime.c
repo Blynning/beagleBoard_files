@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <time.h>
 
-int getHour (char *timeH, int utcTime)
+int get_Hour (char *timeH, int utcTime)
 {
   time_t rawtime;
   struct tm * timeinfo; //declare pointer to struct
@@ -16,7 +16,7 @@ int getHour (char *timeH, int utcTime)
   return(0);
 }
 
-int* getMin (char *timeM)
+int* get_Min (char *timeM)
 {
   time_t rawtime;
   struct tm * timeinfo; //declare pointer to struct
