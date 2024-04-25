@@ -77,6 +77,38 @@ char* temperature_dec= malloc(7*sizeof(char));
 get_Temp(temperature_dec);
 ```
 
+
+# Implementation of Daemon
+```
+[Unit] 
+
+Description=auto start of setupService 
+
+After=network.target 
+
+  
+
+[Service] 
+
+ExecStart=/home/debian/bin/beagleBoard_files/setupService 
+
+WorkingDirectory=/home/debian/bin/beagleBoard_files 
+
+StandardOutput=inherit 
+
+StandardError=inherit 
+
+Restart=always 
+
+User=root 
+
+  
+
+[Install] 
+
+WantedBy=multi-user.target 
+```
+
 # also remember
 ### to use malloc() and free()
 ```c
