@@ -133,7 +133,7 @@ int temp_init( ) {
 }
 
 
-int getTemp(char* tempAddr){
+int get_Temp(char* tempAddr){
         reg32 = i2c_smbus_read_word_data(file, TA_REG);
         if (reg32 < 0) {
                 fprintf(stderr, "ERROR: Read failed on i2c bus register %d - %s\n", TA_REG, strerror(errno));
