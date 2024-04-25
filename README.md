@@ -8,7 +8,7 @@
 ## Important
 
 - Run: display_init() FIRST - to initialize the display
-- display_write(char* message, int line) default writes to 1st line. only "2" wil write to 2nd line
+- display_write(char* message, int line) only "2" wil write to 2nd line any other number will default to 1st line. 
 
 # display examples
 ```C
