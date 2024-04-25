@@ -66,7 +66,7 @@ get_Min(time_minutes);
 - `get_Temp(char* tempAddr)` reads temperature
 
 ## Important
-- temperature is in format "%0.1fC" = 23.4C
+- temperature is in format "%0.1fC" Ex. 12.5C
 - remember to allocate memory for the temperature. (see temp example1)
 
 ### temp examples
