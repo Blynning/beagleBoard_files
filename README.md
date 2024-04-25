@@ -2,8 +2,8 @@
 # Display.C (API For Grove-LCD RGB Backlight)
 
 ## endpoints
-- display_init()
-- display_write(char* message, int line)
+- `display_init()`
+- `display_write(char* message, int line)`
   
 ## Important
 
@@ -17,10 +17,13 @@ char displayText[20];
 // write the message to line 2
 display_write(displayText, 2); 
 ```
+### additional information on Grove LCD RGB Backlight 16x2 can be found [here](https://mars.merhot.dk/w/index.php/Grove_LCD_RGB_Backlight_16x2)
+
+
 # ipGetter.C (API to get IPv4 address from eth0 interface
 
 ## endpoints
-- getIPv4(char *ipAdd)
+- `getIPv4(char *ipAdd)`
 
 ## Important
 - remember to allocate memory for the address. (see ip example1)
@@ -37,8 +40,8 @@ getIPv4(ipaddress_eth0);
 # localTime.C (Api to get current time)
 
 ## endpoints
-- getHour (char *timeH, int utcTime)
-- getMin (char *timeM)
+- `getHour (char *timeH, int utcTime)`
+- `getMin (char *timeM)`
 
 ## Important
 - getHour(char *timeH, int utcTime) gets the hour in utc+0. utcTime adds the amount to the hour. (see localTime example1)
@@ -59,8 +62,8 @@ getMin(time_minutes);
 #tempDev (APi to read temperature from I2C High accuracy temperature sensor)
 
 ## endpoints
-- temp_init() initialize temperature sensor
-- getTemp(char* tempAddr) reads temperature
+- `temp_init()` initialize temperature sensor
+- `getTemp(char* tempAddr)` reads temperature
 
 ## Important
 - temperature is in format "%0.1fC" = 23.4C
