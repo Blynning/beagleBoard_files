@@ -23,7 +23,7 @@ display_write(displayText, 2);
 # ipGetter.C (API to get IPv4 address from eth0 interface
 
 ## endpoints
-- `getIPv4(char *ipAdd)`
+- `get_IPv4(char *ipAdd)`
 
 ## Important
 - remember to allocate memory for the address. (see ip example1)
@@ -34,36 +34,36 @@ display_write(displayText, 2);
 //example1:
 char* ipaddress_eth0 = malloc(15 * sizeof(char)); // allocate memory for ip address
 // get ip
-getIPv4(ipaddress_eth0);
+get_IPv4(ipaddress_eth0);
 ```
 
 # localTime.C (Api to get current time)
 
 ## endpoints
-- `getHour (char *timeH, int utcTime)`
-- `getMin (char *timeM)`
+- `get_Hour (char *timeH, int utcTime)`
+- `get_Min (char *timeM)`
 
 ## Important
-- getHour(char *timeH, int utcTime) gets the hour in utc+0. utcTime adds the amount to the hour. (see localTime example1)
+- get_Hour(char *timeH, int utcTime) gets the hour in utc+0. utcTime adds the amount to the hour. (see localTime example1)
 - size is always 3 * sizeof(char)
 
 ### localTime examples
 ```c
 //example1, get hours:
 char* time_hour = malloc(3 * sizeof(char));
-getHour(time_hour, 2);
+get_Hour(time_hour, 2);
 ```
 ```c
 //example2, get minutes:
 char* time_minutes = malloc(3 * sizeof(char));
-getMin(time_minutes);
+get_Min(time_minutes);
 ```
 
 # tempDev (APi to read temperature from I2C High accuracy temperature sensor)
 
 ## endpoints
 - `temp_init()` initialize temperature sensor
-- `getTemp(char* tempAddr)` reads temperature
+- `get_Temp(char* tempAddr)` reads temperature
 
 ## Important
 - temperature is in format "%0.1fC" = 23.4C
@@ -74,7 +74,7 @@ getMin(time_minutes);
 //example1, allocate memory for temperature:
 char* temperature_dec= malloc(7*sizeof(char));
 //read temperature
-getTemp(temperature_dec);
+get_Temp(temperature_dec);
 ```
 
 # Appenix
