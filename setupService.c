@@ -17,7 +17,7 @@ void *fetch_ip(void *arg){
         char* ipaddress_eth0 = malloc(15 * sizeof(char)); // allocate memory for ip address
 
         while(ip_isValid == 0){
-                getIPv4(ipaddress_eth0); //try get ip address from "ipGetter.h"
+                get_IPv4(ipaddress_eth0); //try get ip address from "ipGetter.h"
                 if(strcmp(ipaddress_eth0, "0") == 0){ //first char of ip is 0
                         ipaddress_eth0 = "loading";
                 }else{
@@ -59,16 +59,16 @@ void *display_temp_time(void *arg){
                 if(update_timer_current_temp <= 0)
                 {
                         // hent temp
-                        getTemp(temperature_dec);
+                        get_Temp(temperature_dec);
                         update_timer_current_temp = update_timer_max_temp;
                 }
                 else{
                         update_timer_current_temp--;
                 }
 
-                getHour(time_hour, 2);
+                get_Hour(time_hour, 2);
 
-                getMin(time_minutes);
+                get_Min(time_minutes);
                 
                 if(show_dots == 1){
                         sprintf(time_text, "%s:%s", time_hour, time_minutes);
