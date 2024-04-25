@@ -90,7 +90,7 @@ free(temperature_dec);
 ```
 
 ### compile
-´´´bash
+```bash
 gcc -c display.c -o display.o -li2c
 gcc -c ipGetter.c -o ipGetter.o
 gcc -c localTime.c -o localTime.o
