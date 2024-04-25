@@ -59,7 +59,7 @@ char* time_minutes = malloc(3 * sizeof(char));
 getMin(time_minutes);
 ```
 
-#tempDev (APi to read temperature from I2C High accuracy temperature sensor)
+# tempDev (APi to read temperature from I2C High accuracy temperature sensor)
 
 ## endpoints
 - `temp_init()` initialize temperature sensor
