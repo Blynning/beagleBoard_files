@@ -1,2 +1,2 @@
 extern int temp_init();
-extern int getTemp(char* tempAddr);
+extern int get_Temp(char* tempAddr);
